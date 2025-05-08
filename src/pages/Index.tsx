@@ -25,6 +25,13 @@ export default function Index() {
     ratingsSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Новый ref для секции чата с волонтерами
+  const chatSectionRef = useRef<HTMLDivElement>(null);
+
+  const scrollToChat = () => {
+    chatSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Навигация */}
